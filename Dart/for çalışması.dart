@@ -14,7 +14,7 @@ for(var h=10;h<91;h+=5){
 
 }
 
-for(var c=20;c>9;c-=2){
+for(var c=2;c>9;c-=2){
 print("q $c");
 }
 

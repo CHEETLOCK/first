@@ -1,5 +1,4 @@
 import 'dart:io';
-
 void main() {
   for (var i = 0; i < 100;) {
     print("sınav sonucunu giriniz");
