@@ -1,56 +1,45 @@
 import 'dart:io';
+import 'dart:math';
 
 void main() {
-  for (int i = 0; i < 3;) {
-    String yazi1 = "toplama (1) \nçıkarma (2) \nçarpma (3) \nbölme (4)";
-    print(yazi1);
-    print("tercihinizi yapınız lütfen.");
-    int secim = 0;
-    int secim2 = 0;
-    int secim3 = 0;
+  while (true) {
+    print('Toplama(1)');
+    print('Cikarma(2)');
+    print('Carpma(3)');
+    print('Bolme(4)');
+    print('Karekok(5)');
+    print('Üslü Sayı Hesaplama(6)');
+   
+    int secim = int.parse(stdin.readLineSync()!);
 
-    try {
-      int tercih = int.parse(stdin.readLineSync()!);
-      if (tercih > 4 || tercih < 0) {
-        print("geçersiz tercih");
-        continue;
+    print('Birinci Sayıyı Giriniz:');
+    int islem1 = int.parse(stdin.readLineSync()!);
+    if (secim == 5 || secim == 6) {
+      switch (secim) {
+        case 5:
+          print('Karekök: ${sqrt(islem1)}');
+          break;
+        case 6:
+          print('Üssü: ${pow(islem1, 2)}');
+          break;
       }
-      print("tercihiniz : $tercih");
-
-      print("birinci sayıyı giriniz lütfen.");
-      int tercih2 = int.parse(stdin.readLineSync()!);
-
-      print("ikinci tercihinizi giriniz lütfen.");
-      int tercih3 = int.parse(stdin.readLineSync()!);
-
-      secim = tercih;
-      secim2 = tercih2;
-      secim3 = tercih3;
-    } catch (e) {
-      print("geçersiz karakter girdiniz");
+      continue;
     }
 
+    print('İkinci Sayıyı Giriniz:');
+    int islem2 = int.parse(stdin.readLineSync()!);
     switch (secim) {
       case 1:
-        {
-          print("toplam :${secim2 + secim3}");
-        }
+        print('Toplam: ${islem1 + islem2}');
         break;
       case 2:
-        {
-          print("çıkarma: ${secim2 - secim3}");
-        }
+        print('Çıkarma: ${islem1 - islem2}');
         break;
       case 3:
-        {
-          print("çarpma: ${secim2 * secim3}");
-        }
+        print('Çarpma: ${islem1 * islem2}');
         break;
-
       case 4:
-        {
-          print("bölme: ${secim2 / secim3}");
-        }
+        print('Bölme: ${islem1 / islem2}');
         break;
     }
   }

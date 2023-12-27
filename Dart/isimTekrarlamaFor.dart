@@ -1,41 +1,15 @@
 import 'dart:io';
 
 void main() {
+  print("isim giriniz");
 
-print("isim giriniz");
+  String isim = stdin.readLineSync()!;
 
-String isim= stdin.readLineSync()!;
+  print("Tekrar sayısını giriniz");
 
-print("Tekrar sayısını giriniz");
+  int tekrar = int.parse(stdin.readLineSync()!);
 
-int tekrar= int.parse(stdin.readLineSync()!);
-
-for(var i=0;i<tekrar;i++){
-  print("${i+1}. $isim");
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  for (var i = 0; i < tekrar; i++) {
+    print("${i + 1}. $isim");
+  }
 }
