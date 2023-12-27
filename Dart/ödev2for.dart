@@ -1,29 +1,11 @@
 import 'dart:io';
 
-void main(){
-for(var i=0;i<100;){
+void main() {
+  print("veri miktarını giriniz");
+  int veri = int.parse(stdin.readLineSync()!);
 
-print("sınav sonucunu giriniz");
-print("çıkış yapmak için 1'e basınız.");
-
-int sonuc1 = int.parse(stdin.readLineSync()!);
-if(sonuc1 >=100){
-  print("geçersiz bir sayı girdiniz");
-}else if(sonuc1 <=0){
-  print("geçersiz bir sayı girdiniz");
-}else if(sonuc1 >=75){
-  print("sınavı geçtiniz.");
-}else if(sonuc1 >=50){
-  print("büte kaldınız");
-}else if(sonuc1 <=50){
-  print("sınavdan kaldınız");
+  while (veri > 0) {
+    print("$veri. veri");
+    veri -= 1;
+  }
 }
-if(sonuc1==1){
-  print("çıkış yapıldı");
-  break;
-}
-
-}
-
-}
-
