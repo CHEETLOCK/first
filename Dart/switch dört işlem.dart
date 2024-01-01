@@ -2,19 +2,13 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
-  
   while (true) {
-    print('Toplama(1)');
-    print('Cikarma(2)');
-    print('Carpma(3)');
-    print('Bolme(4)');
-    print('Karekok(5)');
-    print('Üslü Sayı Hesaplama(6)');
-   
+    print(
+        "Toplama(1) \nÇıkarma(2) \nÇarpma(3) \nBölme(4) \nKarekok(5) \nÜslü Sayı Hesaplama(6)");
     int secim = int.parse(stdin.readLineSync()!);
-
     print('Birinci Sayıyı Giriniz:');
     int islem1 = int.parse(stdin.readLineSync()!);
+
     if (secim == 5 || secim == 6) {
       switch (secim) {
         case 5:
