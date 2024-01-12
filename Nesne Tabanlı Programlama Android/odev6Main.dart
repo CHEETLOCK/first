@@ -6,3 +6,10 @@ void main() {
   int hakan = can.gunSayisi(21);
 print("Sonuç : $hakan");
 }
+
+
+
+
+
+
+  
